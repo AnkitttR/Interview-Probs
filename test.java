@@ -7,3 +7,8 @@ public class test {
      System.out.println(i);
    }}
 }
+
+// Output 
+// Volvo
+// BMW
+// Ford
