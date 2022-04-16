@@ -18,6 +18,10 @@ System.out.println(capitalCities);
 //Getting value by passing key
 System.out.println(capitalCities.get("Bhutan"));
 
+//Finding the size of HashMap
+System.out.println(capitalCities.size());
+
+
 }
 
 
