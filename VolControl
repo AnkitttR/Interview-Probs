@@ -1,0 +1,70 @@
+Problem
+Chef is watching TV. The current volume of the TV is XX. Pressing the volume up button of the TV remote increases the volume by 11 while pressing the volume down
+button decreases the volume by 11. Chef wants to change the volume from XX to YY. Find the minimum number of button presses required to do so.
+
+Input Format
+The first line contains a single integer TT - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers XX and YY - the initial volume and final volume of the TV.
+
+Output Format
+For each test case, output the minimum number of times Chef has to press a button to change the volume from XX to YY.
+
+My (Wrong) Solution ***********************************************************************************************************************************************
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int X = s.nextInt();
+		int Y = s.nextInt();
+		int Z = Y;
+		int MinButtonPress = 0;
+		
+	    if(Y<X)
+		{
+		  MinButtonPress = X-Y;
+		  System.out.println(MinButtonPress);
+		  
+		}else
+		{
+		   MinButtonPress = Y-X;
+		  System.out.println(MinButtonPress); 
+		    
+		}
+	}
+}
+
+Right Solution ****************************************************************************************************************************************
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t > 0 ){
+		    int x = sc.nextInt();
+		    int y = sc.nextInt();
+		    int res = Math.abs(x - y);
+		    System.out.println(res);
+		    t--;
+		}
+		}
+}
