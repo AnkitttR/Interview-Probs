@@ -1,0 +1,72 @@
+You have to withdraw money from ATM, and printout the final balance in account. The withdrwal amount should me multiple of 5, otherwise print initial balance. 
+If account have insufficient funds then in this case also print initial balance.
+
+Withdrawl Amount = X; // Integer type
+Initial balance = Y ; // Float type
+
+My (Wrong) Answer ******************************************************************************************************************************************
+
+// We have populated the solutions for the 10 easiest problems for your support.
+// Click on the SUBMIT button to make a submission to this problem.
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String[] args) throws Exception{
+        Scanner s = new Scanner(System.in);
+        // Logic Final balance Z = Y - X -0.5
+        int t = s.nextInt(); // test cases
+        double Y = s.nextDouble(); // Initial account balance
+        int X = s.nextInt(); // Amount to withdraw
+        double Z = 0.0;
+        
+        while(t>0)
+        {
+            if(X % 5 == 0)
+            {
+                if(Y-X-0.5>0)
+                {
+                    Z = Y-X-0.5;
+                    System.out.println(Z);
+                }else
+                {
+                    System.out.println(Y);
+                }
+                
+            }else
+            {
+                System.out.println(Y);
+            }
+         
+            t--;
+        }        
+    }
+}
+
+Correct Solution **********************************************************************************************************************************************
+
+import java.util.Scanner;
+class Codechef
+{
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n1=sc.nextInt();
+        double n2=sc.nextDouble();
+        if(n1+0.5>n2)
+        {
+            System.out.println(n2);
+        }
+        else if(n1%5!=0)
+        {
+            System.out.println(n2);
+        }
+        else{
+            double val=(n2-n1)-0.5;
+            System.out.println(val);
+        }
+    }
+}
+
+
