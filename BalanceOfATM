@@ -56,14 +56,14 @@ class Codechef
         double n2=sc.nextDouble();
         if(n1+0.5>n2)
         {
-            System.out.println(n2);
+            System.out.println(n2);   // n2 is initial balance
         }
         else if(n1%5!=0)
         {
             System.out.println(n2);
         }
         else{
-            double val=(n2-n1)-0.5;
+            double val=(n2-n1)-0.5;   // val is final balance
             System.out.println(val);
         }
     }
